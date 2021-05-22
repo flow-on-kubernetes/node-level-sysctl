@@ -7,9 +7,13 @@ A simpler version of [cluster-node-tuning-operator](https://github.com/openshift
 
 Example Install Command  for increasing kernet sysctl count:
 
-helm install \
+```
+
+  helm install \
                 --wait \
                 --namespace kube-system \
                 --set "parameters.vm\.max_map_count=262144" \
                 --set podSecurityPolicy.enabled=true \
                 tune-max-map-count ./
+
+```
